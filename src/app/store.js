@@ -4,9 +4,11 @@ import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
+import nowSlice from "../features/now/nowSlice";
 
 const reducers = combineReducers({
-  todos: todosSlice
+  todos: todosSlice,
+  now: nowSlice
 });
 
 const persistConfig = {
