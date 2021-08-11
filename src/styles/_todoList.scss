@@ -44,16 +44,35 @@
     }
   }
 
+  &__flex {
+    display: flex;
+  }
+
   &__btn {
     font-size: 0px;
     background-color: #fff;
     outline: none;
     border: none;
+    cursor: pointer;
+
+    &--delete {
+      &::after {
+        font-size: 20px;
+        content: '🔪';
+        margin-right: 1rem;
+      }
+
+
+      &:hover::after {
+        content: "DELETE";
+        font-size: 10px;
+      }
+    }
 
     &--new {
       &::after {
         font-size: 30px;
-        content: "👌";
+        content: "🪄";
       }
 
       &:hover::after {
@@ -72,4 +91,5 @@
         }
       }
   }
+
 }

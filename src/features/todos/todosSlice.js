@@ -21,11 +21,14 @@ const todosSlice = createSlice({
             if(todoToToggle) {
                 todoToToggle.completed = !todoToToggle.completed
             }
+        },
+        removeTodo(state, action) {
+            state.splice(action.payload, 1)
         }
     }
 })
 
 export const selectTodos = state => state.todos;
 
-export const { addTodo, toggleTodo } = todosSlice.actions
+export const { addTodo, toggleTodo, removeTodo } = todosSlice.actions
 export default todosSlice.reducer

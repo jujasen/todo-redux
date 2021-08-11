@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectTodos } from "./todosSlice";
 import { useDispatch } from "react-redux";
-import { toggleTodo } from "./todosSlice";
+import { toggleTodo, removeTodo } from "./todosSlice";
 
 export const TodoList = () => {
   const todos = useSelector(selectTodos);
@@ -11,6 +11,10 @@ export const TodoList = () => {
 
   const handleToggle = (id) => {
     dispatch(toggleTodo(id));
+  };
+
+  const handleRemove = (id) => {
+    dispatch(removeTodo(id));
   };
 
   return (
@@ -26,7 +30,13 @@ export const TodoList = () => {
                     className="todoList__todo todoList__todo--new"
                     key={todo.id}
                   >
-                    <p>{todo.text}</p>
+                    <div className='todoList__flex'>
+                      <button
+                        onClick={() => handleRemove(todo.id)}
+                        className="todoList__btn todoList__btn--delete"
+                      ></button>
+                      <p>{todo.text}</p>
+                    </div>
                     <button
                       onClick={() => handleToggle(todo.id)}
                       className="todoList__btn todoList__btn--new"
@@ -48,7 +58,13 @@ export const TodoList = () => {
                     className="todoList__todo todoList__todo--done"
                     key={todo.id}
                   >
-                    <p>{todo.text}</p>
+                    <div className='todoList__flex'>
+                      <button
+                        onClick={() => handleRemove(todo.id)}
+                        className="todoList__btn todoList__btn--delete"
+                      ></button>
+                      <p>{todo.text}</p>
+                    </div>
                     <button
                       onClick={() => handleToggle(todo.id)}
                       className="todoList__btn todoList__btn--done"
