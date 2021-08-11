@@ -1,0 +1,75 @@
+.todoList {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+
+  &__section {
+    width: 100%;
+
+    &:first-of-type {
+      padding-right: 10%;
+    }
+  }
+
+  &__doTitle {
+    text-transform: uppercase;
+    color: #8889cf;
+  }
+
+  &__doneTitle {
+    text-transform: uppercase;
+    color: #b8b8b8;
+  }
+
+  &__todos {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__todo {
+    padding: 0.5rem 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 30px;
+    color: #070997;
+
+    p {
+      margin: 0;
+    }
+
+    &--done {
+    color: #7c7c97;
+    }
+  }
+
+  &__btn {
+    font-size: 0px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+
+    &--new {
+      &::after {
+        font-size: 30px;
+        content: "👌";
+      }
+
+      &:hover::after {
+        content: "🙌";
+      }
+    }
+
+    &--done {
+        &::after {
+          font-size: 30px;
+          content: "👊";
+        }
+  
+        &:hover::after {
+          content: "👈";
+        }
+      }
+  }
+}
