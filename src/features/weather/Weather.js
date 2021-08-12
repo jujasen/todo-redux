@@ -30,22 +30,27 @@ export const Weather = () => {
     }
   }, [dispatch, weather.lat, weather.lon]);
 
-  return (
-    <div className="weather">
-      <div className='weather__section'>
-        <img
-        className='weather__img'
-          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon && weather.weather[0].icon}@2x.png`}
-          alt={weather.weather[0].description && weather.weather[0].description}
-        ></img>
-        <h2
-        className='weather__temp'
-        >{weather.main.temp && parseInt(weather.main.temp)} &#8451;</h2>
+  if(!weather.weather) {
+      return <p>Loading..</p>
+  } else {
+      return (
+        <div className="weather">
+        <div className='weather__section'>
+          <img
+          className='weather__img'
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon && weather.weather[0].icon}@2x.png`}
+            alt={weather.weather[0].description && weather.weather[0].description}
+          ></img>
+          <h2
+          className='weather__temp'
+          >{weather.main.temp && parseInt(weather.main.temp)} &#8451;</h2>
+        </div>
+        <div className='weather__section'>
+          <p className='weather__info'>{weather.weather[0].main && weather.weather[0].main}&nbsp;</p>
+          <p className='weather__city'>- {weather.name && weather.name}</p>
+        </div>
       </div>
-      <div className='weather__section'>
-        <p className='weather__info'>{weather.weather[0].main && weather.weather[0].main}&nbsp;</p>
-        <p className='weather__city'>- {weather.name && weather.name}</p>
-      </div>
-    </div>
-  );
+      )
+  }
+
 };
