@@ -21,7 +21,7 @@
     "uuid": "^3.4.0",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "./",
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
