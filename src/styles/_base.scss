@@ -19,6 +19,17 @@ html {
   box-sizing: inherit;
 }
 
+.width {
+  width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .width {
+    width: 80%;
+  }
+
+}
+
 
 .flex {
   display: flex;
@@ -29,6 +40,10 @@ html {
 
   &--ju-center {
     justify-content: center;
+  }
+
+  &--ju-space {
+    justify-content: space-between;
   }
 
   &--col {

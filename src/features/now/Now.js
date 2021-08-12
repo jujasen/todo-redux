@@ -26,8 +26,8 @@ export const Now = () => {
 
   return (
       <div className='now'>
-          {now && <h2>{now.hours}:{now.minutes}:{now.seconds}</h2>}
-          {now && <p>{now.day}, {now.dayNum} of {now.month}</p>}
+          {now && <h2 className='now__time'>{now.hours}:{now.minutes}:{now.seconds}</h2>}
+          {now && <p className='now__date'>{now.day}, {now.dayNum} of {now.month}</p>}
       </div>
   )
 };

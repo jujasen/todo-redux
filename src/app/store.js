@@ -5,10 +5,12 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 import nowSlice from "../features/now/nowSlice";
+import weatherSlice from "../features/weather/weatherSlice";
 
 const reducers = combineReducers({
   todos: todosSlice,
-  now: nowSlice
+  now: nowSlice,
+  weather: weatherSlice
 });
 
 const persistConfig = {
