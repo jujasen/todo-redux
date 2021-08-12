@@ -35,7 +35,7 @@ export const Weather = () => {
       <div className='weather__section'>
         <img
         className='weather__img'
-          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon && weather.weather[0].icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon && weather.weather[0].icon}@2x.png`}
           alt={weather.weather[0].description && weather.weather[0].description}
         ></img>
         <h2
