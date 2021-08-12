@@ -93,3 +93,40 @@
   }
 
 }
+
+
+@media screen and (max-width: 600px) {
+  .todoList {
+    display: block;
+    width: 80%;
+
+    &__todo {
+      font-size: 20px;
+    }
+
+    &__btn {
+  
+      &--delete {
+        &::after {
+          font-size: 15px;
+        }
+
+      }
+  
+      &--new {
+        &::after {
+          font-size: 20px;
+        }
+
+      }
+  
+      &--done {
+          &::after {
+            font-size: 20px;
+          }
+
+        }
+    }
+  
+  }
+}

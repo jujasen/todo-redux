@@ -6,8 +6,10 @@ function App() {
   return (
     <div className="App">
         <Now/>
-        <AddTodo/>
-        <TodoList/>
+        <div className='flex flex--al-center flex--ju-center flex--col'>
+          <AddTodo/>
+          <TodoList/>
+        </div>
     </div>
   );
 }

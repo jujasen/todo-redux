@@ -23,7 +23,7 @@ export const TodoList = () => {
         <h2 className="todoList__doTitle">Stuffs to do</h2>
         <ul className="todoList__todos">
           {todos &&
-            todos.map((todo) => {
+            todos.map((todo, i) => {
               return (
                 !todo.completed && (
                   <li
@@ -32,7 +32,7 @@ export const TodoList = () => {
                   >
                     <div className='todoList__flex'>
                       <button
-                        onClick={() => handleRemove(todo.id)}
+                        onClick={() => handleRemove(i)}
                         className="todoList__btn todoList__btn--delete"
                       ></button>
                       <p>{todo.text}</p>
@@ -51,7 +51,7 @@ export const TodoList = () => {
         <h2 className="todoList__doneTitle">Done stuffs</h2>
         <ul className="todoList__todos">
           {todos &&
-            todos.map((todo) => {
+            todos.map((todo, i) => {
               return (
                 todo.completed && (
                   <li
@@ -60,7 +60,7 @@ export const TodoList = () => {
                   >
                     <div className='todoList__flex'>
                       <button
-                        onClick={() => handleRemove(todo.id)}
+                        onClick={() => handleRemove(i)}
                         className="todoList__btn todoList__btn--delete"
                       ></button>
                       <p>{todo.text}</p>
