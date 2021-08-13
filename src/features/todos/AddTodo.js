@@ -35,36 +35,38 @@ export const AddTodo = () => {
         value={text}
         placeholder="What do you need to do?"
       />
-      <MuiPickersUtilsProvider utils={MomentUtils}>
-        <KeyboardDatePicker
-          disableToolbar
-          variant="dialog"
-          minDate={new Date()}
-          format="DD/MM/yyyy"
-          margin="normal"
-          id="date-picker-inline"
-          label="TODO date"
-          value={doBy}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            "aria-label": "change date",
-          }}
-        />
-        <KeyboardTimePicker
-          ampm={false}
-          margin="normal"
-          id="time-picker"
-          label="TODO time"
-          value={doBy}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            "aria-label": "change time",
-          }}
-        />
-      </MuiPickersUtilsProvider>
-      <button className="addTodo__btn" type="submit">
-        Add
-      </button>
+      <div className='addTodo--flex'>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
+            <KeyboardDatePicker
+            disableToolbar
+            variant="dialog"
+            minDate={new Date()}
+            format="DD/MM/yyyy"
+            margin="normal"
+            id="date-picker-inline"
+            label="TODO date"
+            value={doBy}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+                "aria-label": "change date",
+            }}
+            />
+            <KeyboardTimePicker
+            ampm={false}
+            margin="normal"
+            id="time-picker"
+            label="TODO time"
+            value={doBy}
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+                "aria-label": "change time",
+            }}
+            />
+        </MuiPickersUtilsProvider>
+        <button className="addTodo__btn" type="submit">
+            Add
+        </button>
+      </div>
     </form>
   );
 };

@@ -3,6 +3,9 @@
     display: flex;
     margin-top: 20vh;
     
+    &--flex {
+        display: flex;
+    }
 
     
     &__input {
@@ -61,9 +64,9 @@
 @media screen and (max-width: 800px) {
     .addTodo {
         width: 80%;
-        display: flex;
+        display: block;
         margin-top: 15vh;
-        
+        margin-bottom: 2rem;
     
         
         &__input {
@@ -84,6 +87,7 @@
             font-size: 15px;
             text-transform: uppercase;
             cursor: pointer;
+            margin-top: 1rem;
 
         }
     
