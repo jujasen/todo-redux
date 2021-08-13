@@ -12,16 +12,17 @@ import {
 export const AddTodo = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [doBy, setdoBy] = useState(new Date());
 
   const handleDateChange = (date) => {
-    setSelectedDate(date);
+    setdoBy(date);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text) {
-      dispatch(addTodo(text));
+    if (text, doBy) {
+        console.log({text, doBy})
+      dispatch(addTodo({text, doBy}));
       setText("");
     }
   };
@@ -44,7 +45,7 @@ export const AddTodo = () => {
           margin="normal"
           id="date-picker-inline"
           label="TODO date"
-          value={selectedDate}
+          value={doBy}
           onChange={handleDateChange}
           KeyboardButtonProps={{
             "aria-label": "change date",
@@ -55,7 +56,7 @@ export const AddTodo = () => {
           margin="normal"
           id="time-picker"
           label="TODO time"
-          value={selectedDate}
+          value={doBy}
           onChange={handleDateChange}
           KeyboardButtonProps={{
             "aria-label": "change time",

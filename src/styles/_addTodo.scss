@@ -14,6 +14,10 @@
         font-size: 40px;
         margin-right: 1rem;
         color: #00025f;
+
+        &:focus {
+            border-bottom: 5px solid #3d3fd3;
+        }
     }
 
     &__btn {
@@ -39,8 +43,17 @@
         bottom: -19px!important;
     }
 
+    .MuiInput-underline::after {
+        border-bottom: 5px solid #3d3fd3;
+        bottom: -19px!important;
+    }
+
     .MuiFormControl-marginNormal {
         margin-right: 1rem;
+    }
+
+    .MuiInput-underline:hover:not(.Mui-disabled)::before {
+        border-bottom: 5px solid #8f90db;
     }
 
 }

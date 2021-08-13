@@ -1,5 +1,5 @@
 .todoList {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: flex-start;
 
@@ -37,6 +37,11 @@
 
     p {
       margin: 0;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 15px;
     }
 
     &--done {
