@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./todosSlice";
-import { alpha } from '@material-ui/core/styles'
 import MomentUtils from "@date-io/moment";
 import {
   MuiPickersUtilsProvider,
@@ -20,7 +19,7 @@ export const AddTodo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text, doBy) {
+    if (text && doBy) {
         console.log({text, doBy})
       dispatch(addTodo({text, doBy}));
       setText("");
