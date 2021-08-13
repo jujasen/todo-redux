@@ -35,7 +35,7 @@ export const TodoList = () => {
                         onClick={() => handleRemove(i)}
                         className="todoList__btn todoList__btn--delete"
                       ></button>
-                      <p>{todo.text}&nbsp;&nbsp;&nbsp; <span>by {moment(todo.doBy).format('MM/DD/YY')} at {moment(todo.doBy).format('h:mm')}</span></p>
+                      <p>{todo.text}&nbsp;&nbsp;&nbsp; <span>by {moment(todo.doBy).format('MM/DD/YY')} at {moment(todo.doBy).format('HH:mm')}</span></p>
                     </div>
                     <button
                       onClick={() => handleToggle(todo.id)}
@@ -63,7 +63,7 @@ export const TodoList = () => {
                         onClick={() => handleRemove(i)}
                         className="todoList__btn todoList__btn--delete"
                       ></button>
-                      <p>{todo.text}&nbsp;&nbsp;&nbsp; <span>by {moment(todo.doBy).format('MM/DD/YY')} at {moment(todo.doBy).format('h:mm')}</span></p>
+                      <p>{todo.text}&nbsp;&nbsp;&nbsp; <span>by {moment(todo.doBy).format('MM/DD/YY')} at {moment(todo.doBy).format('HH:mm')}</span></p>
                     </div>
                     <button
                       onClick={() => handleToggle(todo.id)}
