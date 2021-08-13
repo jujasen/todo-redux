@@ -9,9 +9,9 @@ const todosSlice = createSlice({
             const todoToAdd = {
                 id: uuidv4(),
                 text: action.payload,
-                completed: false
+                completed: false,
+                doBy: action.payload
             }
-            console.log(todoToAdd)
 
             state.push(todoToAdd)
         },

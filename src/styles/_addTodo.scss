@@ -1,5 +1,5 @@
 .addTodo {
-    width: 70%;
+    width: 80%;
     display: flex;
     margin-top: 20vh;
     
@@ -28,6 +28,19 @@
             background-color: #b8b9ec;
             color: #00025f;
         }
+    }
+
+    label + .MuiInput-formControl {
+        margin-top: 30px;
+    }
+
+    .MuiInput-underline::before {
+        border-bottom: 5px solid #8f90db;
+        bottom: -19px!important;
+    }
+
+    .MuiFormControl-marginNormal {
+        margin-right: 1rem;
     }
 
 }

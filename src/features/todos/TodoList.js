@@ -7,7 +7,6 @@ export const TodoList = () => {
   const todos = useSelector(selectTodos);
   const dispatch = useDispatch();
 
-  console.log(todos);
 
   const handleToggle = (id) => {
     dispatch(toggleTodo(id));

@@ -20,7 +20,6 @@ export const fetchWeather = async ({lat, lon}) => {
     const response = await axios.get(`${API_URL}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`);
 
     const json = await response.data;
-    console.log(json)
 
     return json;
 }
